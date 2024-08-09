@@ -1,0 +1,66 @@
+<Phase3Screen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+
+        BoxLayout:
+            size_hint_y: None
+            height: 50
+            padding: 5
+            spacing: 5
+
+            Button:
+                id: import_button
+                text: 'Import Image'
+                size_hint_x: 0.25
+                on_release: root.import_image()
+
+            Button:
+                id: encrypt_button
+                text: 'Encrypt Image'
+                size_hint_x: 0.25
+                on_release: root.encrypt_image()
+
+            Button:
+                id: decrypt_button
+                text: 'Decrypt Image'
+                size_hint_x: 0.25
+                on_release: root.decrypt_image()
+
+            Button:
+                id: flip_button
+                text: 'Flip Image'
+                size_hint_x: 0.25
+                on_release: root.flip_image()
+
+            Button:
+                id: mirror_button
+                text: 'Mirror Image'
+                size_hint_x: 0.25
+                on_release: root.mirror_image()
+
+            Button:
+                id: brightness_button
+                text: 'Adjust Brightness'
+                size_hint_x: 0.25
+                on_release: root.brightness()
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 5
+            spacing: 5
+
+            Image:
+                id: input_image
+                source: ''
+                size_hint_x: 0.5
+
+            Image:
+                id: output_image
+                source: ''
+                size_hint_x: 0.5
+
+        BoxLayout:
+            id: file_chooser_container
+            size_hint_y: None
+            height: 200
